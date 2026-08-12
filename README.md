@@ -2,15 +2,7 @@
 
 Lets any Zapier customer search **people**, **companies**, and **schools** through Expose.team from inside a Zap.
 
-Built with the [Zapier Platform CLI](https://platform.zapier.com/) — this is a standalone Zapier app, not part of the [expose-team/website](../website) Nuxt project. It just calls the public `https://expose.team/api` endpoints that the website already exposes.
-
-## How it works
-
-- **Authentication** (`authentication.js`): custom auth — the user pastes their Expose.team API key (from `/platform/api-key`). The test call hits `GET /api/api-key` with `x-api-key` set, which validates the key and returns the account's name/email.
-- **Searches** (`searches/*.js`): "Find Person", "Find Company", "Find School" — each is a thin wrapper around `GET /api/search?type=...`, callable as a step in a Zap to enrich data mid-Zap.
-- Every request automatically gets the `x-api-key` header attached (`beforeRequest` in `index.js`), and 401/402 responses are turned into readable Zapier errors (invalid key / out of credits).
-
-There's no API versioning here on purpose — this app always calls the live `expose.team` endpoints, so a change on the website side takes effect immediately without needing a Zapier app republish.
+Built with the [Zapier Platform CLI](https://platform.zapier.com/) — this is a standalone Zapier app.
 
 ## Local setup
 
