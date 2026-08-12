@@ -8,6 +8,8 @@ module.exports = {
     description: "Finds a person by email, phone, or LinkedIn profile URL.",
   },
   operation: {
+    // Don't let Zapier auto-trim/cast our string inputs — keep behavior predictable.
+    cleanInputData: false,
     inputFields: [
       { key: "email", label: "Email", type: "string", helpText: "The person's email address." },
       { key: "phone", label: "Phone", type: "string", helpText: "The person's phone number." },

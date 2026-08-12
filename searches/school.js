@@ -8,6 +8,8 @@ module.exports = {
     description: "Finds a school by domain or profile URL.",
   },
   operation: {
+    // Don't let Zapier auto-trim/cast our string inputs — keep behavior predictable.
+    cleanInputData: false,
     inputFields: [
       { key: "domain", label: "Domain", type: "string", helpText: "The school's website domain, e.g. stanford.edu." },
       { key: "profile_url", label: "Profile URL", type: "string", helpText: "The school's LinkedIn (or other) profile URL." },

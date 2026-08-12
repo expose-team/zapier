@@ -8,6 +8,8 @@ module.exports = {
     description: "Finds a company by domain or profile URL.",
   },
   operation: {
+    // Don't let Zapier auto-trim/cast our string inputs — keep behavior predictable.
+    cleanInputData: false,
     inputFields: [
       { key: "domain", label: "Domain", type: "string", helpText: "The company's website domain, e.g. acme.com." },
       { key: "profile_url", label: "Profile URL", type: "string", helpText: "The company's LinkedIn (or other) profile URL." },
