@@ -1,0 +1,25 @@
+{
+  "name": "expose-zapier",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Zapier integration for Expose.team — search people, companies, and schools from a Zap.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --recursive test --timeout 20000"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "dependencies": {
+    "zapier-platform-core": "19.1.0"
+  },
+  "devDependencies": {
+    "mocha": "^10.4.0",
+    "should": "^13.2.3",
+    "zapier-platform-cli": "19.1.0"
+  },
+  "zapier": {
+    "convertToUIApp": false
+  }
+}

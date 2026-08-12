@@ -1,0 +1,6 @@
+node_modules/
+.env
+.environment
+.zapierapprc
+build/
+*.zip
