@@ -1,6 +1,6 @@
 {
   "name": "expose-zapier",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "private": true,
   "description": "Zapier integration for Expose.team — search people, companies, and schools from a Zap.",
   "main": "index.js",

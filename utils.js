@@ -4,6 +4,7 @@ const API_BASE = "https://expose.team/api";
 const includeApiKey = (request, z, bundle) => {
   request.headers = request.headers || {};
   request.headers["x-api-key"] = bundle.authData.apiKey;
+  request.headers["source"] = "zapier";
   return request;
 };
 
