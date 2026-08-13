@@ -14,7 +14,7 @@ module.exports = {
       label: "API Key",
       required: true,
       type: "password",
-      helpText: "Find your API key on your [Expose.team dashboard](https://expose.team/platform/api-key).",
+      helpText: "Find your API key on your [expose access dashboard](https://expose.team/platform/access/api).",
     },
   ],
   test,

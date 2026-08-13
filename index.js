@@ -9,7 +9,7 @@ const addAuthHeader = (request, z, bundle) => includeApiKey(request, z, bundle);
 
 const handleErrors = (response, z, bundle) => {
   if (response.status === 401) {
-    throw new z.errors.Error("Invalid API key. Check your key on your Expose.team dashboard.", "AuthenticationError", response.status);
+    throw new z.errors.Error("Invalid API key. Check your key on your expose access dashboard.", "AuthenticationError", response.status);
   }
   if (response.status === 402) {
     throw new z.errors.Error("You're out of Expose.team credits (or don't have an active subscription).", "InsufficientCredits", response.status);
